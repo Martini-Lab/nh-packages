@@ -121,6 +121,7 @@ termux_step_pre_configure() {
 	EOF
 	export CC="$(command -v "$CC")"
 	export CXX="$(command -v "$CXX")"
+	autoreconf -fiv
 }
 
 termux_step_make_install() {
