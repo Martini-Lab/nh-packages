@@ -50,13 +50,6 @@ termux_step_pre_configure() {
 	EOF
 	chmod 0700 "$ar_wrapper"
 
-	local strip_wrapper="${_WRAPPER_BIN}/${_TERMUX_HOST_PLATFORM}-strip"
-	cat > "$strip_wrapper" <<- EOF
-		#!$(command -v sh)
-		exec $(command -v ${STRIP}) "\$@"
-	EOF
-	chmod 0700 "$strip_wrapper"
-
 	export PATH="${_WRAPPER_BIN}:${PATH}"
 	export LIBTOOL="$(command -v libtool)"
 

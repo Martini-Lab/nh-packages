@@ -11,7 +11,7 @@ termux_step_configure() {
 		if [ "$TERMUX_CONTINUE_BUILD" == "true" ]; then
 			return
 		fi
-		termux_step_configure_autotools
+		termux_step_configure_autotools && cat "$TERMUX_PKG_SRCDIR/config.log"
 	elif [ "$TERMUX_PKG_FORCE_CMAKE" = "true" ] || [ -f "$TERMUX_PKG_SRCDIR/CMakeLists.txt" ]; then
 		termux_setup_cmake
 		if [ "$TERMUX_CMAKE_BUILD" = Ninja ]; then
