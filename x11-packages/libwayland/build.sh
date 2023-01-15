@@ -9,6 +9,7 @@ TERMUX_PKG_SHA256=72aa11b8ac6e22f4777302c9251e8fec7655dc22f9d94ee676c6b276f95f91
 TERMUX_PKG_DEPENDS="libandroid-support, libffi, libxml2, libexpat"
 TERMUX_PKG_EXTRA_CONFIGURE_ARGS="--disable-documentation --with-host-scanner"
 TERMUX_PKG_HOSTBUILD=true
+
 TERMUX_PKG_EXTRA_HOSTBUILD_CONFIGURE_ARGS="
 --disable-libraries
 --disable-documentation
